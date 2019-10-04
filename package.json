@@ -24,7 +24,9 @@
     "monaco-compile-check": "tsc -p src/tsconfig.monaco.json --noEmit",
     "download-builtin-extensions": "node build/lib/builtInExtensions.js",
     "strict-null-check": "tsc -p src/tsconfig.strictNullChecks.json",
-    "strict-null-check-watch": "tsc -p src/tsconfig.strictNullChecks.json --watch"
+    "strict-null-check-watch": "tsc -p src/tsconfig.strictNullChecks.json --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "applicationinsights": "1.0.8",
@@ -56,7 +58,8 @@
     "vscode-xterm": "3.11.0-beta1",
     "winreg": "^1.2.4",
     "yauzl": "^2.9.1",
-    "yazl": "^2.4.3"
+    "yazl": "^2.4.3",
+    "snyk": "^1.230.5"
   },
   "devDependencies": {
     "7zip": "0.0.6",
@@ -149,5 +152,6 @@
     "windows-foreground-love": "0.1.0",
     "windows-mutex": "0.2.1",
     "windows-process-tree": "0.2.3"
-  }
+  },
+  "snyk": true
 }
